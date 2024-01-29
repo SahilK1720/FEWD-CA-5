@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Halant', serif;
+}
+
+
+nav{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-inline: 2vw;
+    background-image: url("https://kalvium.community/images/livebooks_grid_tablet.svg");
+    background-color: rgb(66,54,83);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    box-shadow: 0 5px 8px 0 rgb(138, 137, 134);
+    padding-block: 35px;
+}
+
+img{
+    width: 17vw;
+    height: 4.6vw;
+}
+
+
+
+.input{
+    width: 50vw;
+    height: 3vw;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    padding-block: 1vw;
+    font-size: 1vw;
+    padding-left: 1.2vw;
+    box-shadow: 0 3px 8px 0 rgb(37, 1, 53);
+}
+
+
+.register-btn{
+    width: 8vw;
+    height: 2.8vw;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 3px 8px 0 rgb(37, 1, 53);
+    background-color: rgb(243,53,60);
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+
+}

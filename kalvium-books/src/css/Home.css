@@ -1,0 +1,95 @@
+.main{
+    background-color: rgb(249, 242, 252);
+    background-image: url("https://kalvium.community/assets/widget-background.812f48c4.svg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.success-message {
+    position: absolute; 
+    margin-top: 23px;
+    margin-left: 10px;
+    height: 70px;
+    width: 240px;
+    background-color: rgb(238, 255, 238); 
+    border: 4px solid rgb(6, 210, 6);
+    font-size: 1.2rem;
+    color: rgb(6, 184, 6);
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 19px;
+    box-shadow: 2px 8px 10px 0 rgb(37, 1, 53);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: auto;
+    padding-block: 120px;
+    padding-inline: 1.2vw;
+    overflow: hidden;
+    row-gap: 3vw;
+    column-gap: 3vw;
+}
+
+.card {
+    background-color: rgb(254,254,246);
+    background-image: url("https://kalvium.community/images/launcher-hero-bg.svg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    width: 260px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    padding-bottom: 1vw;
+    box-shadow: 0 0 10px 0 rgb(189, 189, 189);
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #e5e7cc;
+    transform: translateY(-2px);
+}
+
+.card-image{
+    padding: 2vh;
+}
+
+.card-image img {
+    border-radius: 10px;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.card-text{
+    padding-inline: 12px;
+    text-align: start;
+}
+
+.ratings{
+    color: #858585;
+}
+
+.author{
+    font-weight: 550;
+    padding-bottom: 4px;
+    color: #5e5e5e;
+}
+
+h3{
+    font-size: 1rem;
+    text-wrap: wrap;
+    padding-bottom: 1.9vh;
+}
