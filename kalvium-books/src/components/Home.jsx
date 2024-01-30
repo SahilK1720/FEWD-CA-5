@@ -20,14 +20,13 @@ function Books() {
       .then((response) => {
         const data = response.data.books;
         setApiData(data);
-        console.log(data)
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
 
-  // Check for registration success value in sessionStorage and show message accordingly.
+  // Checks for registrationSuccess value in sessionStorage and shows message accordingly.
   useEffect(() => {
     const showSuccess = sessionStorage.getItem("registrationSuccess");
     if (showSuccess) {
@@ -35,7 +34,7 @@ function Books() {
       setTimeout(() => {
         setShowSuccessMessage(false);
         sessionStorage.removeItem("registrationSuccess"); 
-      }, 4000);
+      }, 3000);
     }
   }, []);
 

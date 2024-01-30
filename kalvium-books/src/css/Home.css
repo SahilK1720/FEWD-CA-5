@@ -42,7 +42,7 @@
     column-gap: 3vw;
 }
 
-.card {
+.card{
     background-color: rgb(254,254,246);
     background-image: url("https://kalvium.community/images/launcher-hero-bg.svg");
     object-fit: cover;
