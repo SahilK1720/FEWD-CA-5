@@ -23,8 +23,6 @@ function Form() {
         <label>First Name:</label>
         <input type="text" {...register("firstName", { required: 'First name is Required!', minLength: { value: 3, message: "Name should be more than 2 characters" }, maxLength: { value: 30, message: "Name should be less than 30 characters" } })} />
         {errors.firstName && <p className='error-text'>{errors.firstName.message}</p>}
-
-
         <label>Email:</label>
         <input type="email" {...register("email", { required: 'Email is Required!', pattern: { value: /^\S+@\S+$/i, message: "Invalid email" } })} />
         {errors.email && <p className='error-text'>{errors.email.message}</p>}
