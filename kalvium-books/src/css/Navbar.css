@@ -1,58 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@500&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Halant', serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  font-family: 'Halant', serif;
+  background-image: url("https://kalvium.community/images/livebooks_grid_tablet.svg");
+  background-color: rgb(66,54,83);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  padding: 35px 2vw;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 5px 8px 0 rgb(138, 137, 134);
+}
+
+img {
+  width: 250px; 
+  height: auto; 
+}
+
+.input {
+  font-family: 'Halant', serif;
+  background-color: rgb(255, 255, 255);
+  flex-grow: 1; 
+  width: 50vw;
+  height: 45px; 
+  margin: 0 10px;
+  padding: 10px; 
+  border-radius: 7px;
+  font-size: 16px; 
+  border: none;
+  box-shadow: 0 6px 8px 0 rgb(37, 1, 53);
+}
+
+.register-btn {
+  font-family: 'DM Serif Display', serif;
+  background-color: rgb(243,53,60);
+  width: auto; 
+  padding: 10px 20px; 
+  color: white;
+  font-weight: bold;
+  font-size: 16px; 
+  letter-spacing: 1.3px;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 6px 8px 0 rgb(37, 1, 53);
+}
+
+.register-btn:hover{
+  background-color: #d41010;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  animation: 1s ease 0s normal none pulsate;
+  opacity: 1;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
 }
 
 
-nav{
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-inline: 2vw;
-    background-image: url("https://kalvium.community/images/livebooks_grid_tablet.svg");
-    background-color: rgb(66,54,83);
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    box-shadow: 0 5px 8px 0 rgb(138, 137, 134);
-    padding-block: 35px;
+@media (max-width: 768px) {
+  .input, .register-btn {
+    font-size: 14px; 
+    padding: 8px 16px;
+    height: auto; 
+  }
+
+  nav {
+    flex-direction: column; 
+    padding: 20px;
+  }
+
+  .input {
+    width: 90vw; 
+    margin: 10px 0; 
+    margin-right: 2vw;
+  }
+
+  img {
+    width: 70vw;
+    margin-bottom: 10px;
+    margin-right: 2vw;
+  }
+
+  .register-btn {
+    width: 17vh; 
+    height: 7vh;
+    margin-top: 30px; 
+  } 
 }
 
-img{
-    width: 17vw;
-    height: 4.6vw;
-}
-
-
-
-.input{
-    width: 50vw;
-    height: 3vw;
-    border-radius: 7px;
-    border: none;
-    background-color: rgb(255, 255, 255);
-    padding-block: 1vw;
-    font-size: 1vw;
-    padding-left: 1.2vw;
-    box-shadow: 0 3px 8px 0 rgb(37, 1, 53);
-}
-
-
-.register-btn{
-    width: 8vw;
-    height: 2.8vw;
-    border: none;
-    border-radius: 7px;
-    box-shadow: 0 3px 8px 0 rgb(37, 1, 53);
-    background-color: rgb(243,53,60);
-    color: white;
-    font-weight: bold;
-    font-size: 1vw;
-
+@media (max-width: 480px) {
+  .register-btn {
+    width: 16vh; 
+    height: 5vh;
+    margin-top: 30px; 
+  }
 }

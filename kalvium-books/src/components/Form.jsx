@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import '../css/Form.css';
 
 function Form() {
   const navigate = useNavigate();
-  const [submission, setSubmission] = useState(false);
+
+  // Initialize useForm hook with destructured properties for form handling.
   const { register, handleSubmit, formState: { errors }, watch } = useForm();
 
+   // onSubmit function that will be called upon form submission.
   const onSubmit = (values) => {
     console.log(values);
-    setSubmission(true);
-    navigate("/?registration=success");
+    navigate("/");
+     // Used to show the "Registration Successful" message in the Home component.
     sessionStorage.setItem("registrationSuccess", "true");
   };
 
   return (
-    <div className="app">
+    <div className="form-container">
+      <h1 className='text'>Register to avail more books</h1>
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
         <label>First Name:</label>
         <input type="text" {...register("firstName", { required: 'First name is Required!', minLength: { value: 3, message: "Name should be more than 2 characters" }, maxLength: { value: 30, message: "Name should be less than 30 characters" } })} />
@@ -34,7 +36,7 @@ function Form() {
         <input type='password' {...register('confirm', { required: 'Confirm Your Password', validate: (value) => value === watch('password') || "Passwords don't match" })} />
         {errors.confirm && <p className='error-text'>{errors.confirm.message}</p>}
 
-        <input type="submit" value="Sign Up" className='button' disabled={!!Object.keys(errors).length} />
+        <input type="submit" value="Sign Up" className='button' disabled={Object.keys(errors).length} />
       </form>
     </div>
   );

@@ -11,6 +11,7 @@ function Books() {
   const [filteredBooks, setFilteredBooks] = useState([]);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
+  // Fetch books data from the API on component mount.
   useEffect(() => {
     axios
       .get("https://reactnd-books-api.udacity.com/books", {
@@ -19,12 +20,14 @@ function Books() {
       .then((response) => {
         const data = response.data.books;
         setApiData(data);
+        console.log(data)
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
 
+  // Check for registration success value in sessionStorage and show message accordingly.
   useEffect(() => {
     const showSuccess = sessionStorage.getItem("registrationSuccess");
     if (showSuccess) {
@@ -36,6 +39,7 @@ function Books() {
     }
   }, []);
 
+  // Filter books based on the search query.
   useEffect(() => {
     const filtered = ApiData.filter(book =>
       book.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -43,6 +47,7 @@ function Books() {
     setFilteredBooks(filtered);
   }, [ApiData, searchQuery]);
 
+  // Handle changes to the search input field.
   const handleSearchInputChange = (e) => {
     setSearchQuery(e.target.value);
   };
@@ -51,7 +56,7 @@ function Books() {
     <div className="main">
       {showSuccessMessage && (
         <div className="success-message">
-          Registration Successful!
+          Registration Successful! ✅
         </div>
       )}
       <nav>
@@ -80,17 +85,17 @@ function Books() {
       </nav>
 
       <div className="container flex">
-        {filteredBooks.map((item) => (
-          <div className="card" key={item.id}>
+        {filteredBooks.map((book) => (
+          <div className="card" key={book.id}>
             <div className="card-image">
-              <img src={item.imageLinks.smallThumbnail} alt={item.title} />
+              <img src={book.imageLinks.smallThumbnail} alt={book.title} />
             </div>
             <div className="card-text">
-              <h3>{item.title}</h3>
+              <h3>{book.title}</h3>
               <div className="ratings">
-              <p className="author">By {item.authors}</p>
-                {item.averageRating ? (
-                  <span>{item.averageRating}★</span>
+              <p className="author">By {book.authors}</p>
+                {book.averageRating ? (
+                  <span>{book.averageRating}⭐</span>
                 ) : (
                   "No ratings yet"
                 )}

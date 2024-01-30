@@ -1,85 +1,101 @@
-body{
-  background-color: rgb(254,254,246);
-  background-image: url("https://kalvium.community/assets/widget-background.812f48c4.svg");
+body {
+  background-color: rgb(255, 236, 201);
+  background-image: url("https://kalvium.community/images/launcher-hero-bg.svg");
   background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  min-height: 88vh; 
+  width: 100%; 
 }
 
-.app {
-  background-color: rgb(254,254,246);
+.form-container{
+  font-family: 'DM Serif Display', serif;
+  background-color: rgb(254, 254, 246);
   background-image: url("https://kalvium.community/images/launcher-hero-bg.svg");
   object-fit: cover;
-  background-position: center;
+  background-position: start;
   background-repeat: repeat;
   background-size: cover;
-  width: 25vw;
-  height: 37vw;
-  margin: 6vw auto;
-  padding: 25px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center ;
-  box-shadow: 0 20px 30px 0 rgb(0, 0, 0);
-  padding-block: 14vw;
-}
-
-form {
-  margin-top: 2vw;
+  width: 80%;
+  max-width: 500px;
+  margin-inline: auto;
+  margin-top: 12vh;
+  padding-block: 60px;
+  padding-inline: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  border-radius: 10px;
+  box-shadow: 0 20px 30px 0 rgb(0, 0, 0);
 }
 
-input{
-  width: 20vw;
-  height: 3vw;
-  border: none;
-  padding-inline: 1.3vw;
-  border-radius: 5px;
-  background-color: white;
-  color: rgb(63, 63, 63);
+.text{
+  position: relative;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 label {
-  align-self: flex-start;
-  margin-top: 1.2vw;
+  width: 100%;
+  margin-top: 10px;
   color: rgb(63, 63, 63);
   font-weight: bold;
 }
 
-.button {
-  width: 20vw;
-  padding: 5px;
-  font-size: 20px;
-  margin-top: 2vw;
-  background-color: #4caf50;
-  color: white;
+input, .button {
+  width: calc(100% - 16px);
+  padding: 10px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
+  background-color: rgb(228, 228, 228);
+  color: rgb(63, 63, 63);
+}
+
+.button{
+  font-family: 'DM Serif Display', serif;
+  margin-top: 1rem;
+  background-color: #e48a01;
+  color: white;
   cursor: pointer;
 }
 
-.success{
-  margin-top: -30px;
-  display: flex;
+.button:hover{
+  background-color: #ff7700;
   align-items: center;
-  justify-content: center;
-  background-color: #4caf50;
-  width: 20vw;
-  height: 3.3vw;
-  padding: 5px;
-  font-size: 20px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  justify-content: space-between;
+  gap: 0px;
+  animation: 1s ease 0s normal none pulsate;
+  opacity: 1;
 }
 
-.error-text{
+.error-text {
   color: red;
+  margin-top: -1px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 20vh;
+    padding: 15px;
+  }
+
+  .text{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  input, .button{
+    font-size: 0.9rem;
+  }
 }
