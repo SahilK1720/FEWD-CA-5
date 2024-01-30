@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@500&display=swap');
 
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -22,12 +22,12 @@ nav{
   box-shadow: 0 5px 8px 0 rgb(138, 137, 134);
 }
 
-img {
+img{
   width: 250px; 
   height: auto; 
 }
 
-.input {
+.input{
   font-family: 'Halant', serif;
   background-color: rgb(255, 255, 255);
   flex-grow: 1; 
@@ -41,7 +41,7 @@ img {
   box-shadow: 0 6px 8px 0 rgb(37, 1, 53);
 }
 
-.register-btn {
+.register-btn{
   font-family: 'DM Serif Display', serif;
   background-color: rgb(243,53,60);
   width: auto; 
@@ -64,7 +64,7 @@ img {
   opacity: 1;
 }
 
-@keyframes pulsate {
+@keyframes pulsate{
   0% {
     transform: scale(1);
     transform-origin: center center;
@@ -90,30 +90,30 @@ img {
 
 
 @media (max-width: 768px) {
-  .input, .register-btn {
+  .input, .register-btn{
     font-size: 14px; 
     padding: 8px 16px;
     height: auto; 
   }
 
-  nav {
+  nav{
     flex-direction: column; 
     padding: 20px;
   }
 
-  .input {
+  .input{
     width: 90vw; 
     margin: 10px 0; 
     margin-right: 2vw;
   }
 
-  img {
+  img{
     width: 70vw;
     margin-bottom: 10px;
     margin-right: 2vw;
   }
 
-  .register-btn {
+  .register-btn{
     width: 17vh; 
     height: 7vh;
     margin-top: 30px; 
@@ -121,7 +121,7 @@ img {
 }
 
 @media (max-width: 480px) {
-  .register-btn {
+  .register-btn{
     width: 16vh; 
     height: 5vh;
     margin-top: 30px; 

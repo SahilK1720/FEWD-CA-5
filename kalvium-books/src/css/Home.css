@@ -11,7 +11,7 @@
     width: 100%; 
 }
 
-.success-message {
+.success-message{
     background-color: rgb(238, 255, 238); 
     position: absolute; 
     margin-top: 22px;
@@ -33,7 +33,7 @@
     flex-wrap: wrap;
 }
 
-.container {
+.container{
     width: auto;
     padding-block: 120px;
     padding-inline: 1.2vw;
@@ -59,7 +59,7 @@
     box-shadow: 0 0 10px 0 rgb(47, 47, 47);
 }
 
-.card:hover {
+.card:hover{
     box-shadow: 1px 1px 8px #474747;
     background-color: rgb(255, 238, 207);
     transform: translateY(-4px);
@@ -69,7 +69,7 @@
     padding: 2vh;
 }
 
-.card-image img {
+.card-image img{
     border-radius: 10px;
     width: 100%;
     height: 40vh;

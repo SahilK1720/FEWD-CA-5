@@ -1,4 +1,4 @@
-body {
+body{
   background-color: rgb(255, 236, 201);
   background-image: url("https://kalvium.community/images/launcher-hero-bg.svg");
   background-position: center;
@@ -36,13 +36,13 @@ body {
   margin-bottom: 20px;
 }
 
-form {
+form{
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-label {
+label{
   width: 100%;
   margin-top: 10px;
   color: rgb(63, 63, 63);
@@ -76,7 +76,7 @@ input, .button {
   opacity: 1;
 }
 
-.error-text {
+.error-text{
   color: red;
   margin-top: -1px;
 }
